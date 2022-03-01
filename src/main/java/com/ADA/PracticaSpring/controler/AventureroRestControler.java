@@ -20,7 +20,7 @@ public class AventureroRestControler {
         this.aventureroRepository = aventureroRepository;
     }
 
-    @GetMapping("/aventurero")
+    @GetMapping("/fdess<ASZ------+21")
     List<Aventurero> getAll() {
         return (List<Aventurero>) aventureroRepository.findAll();
     }

@@ -1,36 +1,38 @@
 package com.ADA.PracticaSpring.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
+@Table(name = "arma")
 public class Arma {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idArma;
 
     private String nombreArma;
-    private String daño;
+    private String danyo;
 
+    @JsonIgnore
     @OneToOne
-    @JoinColumn(name = "idAdv")
+    @JoinColumn(name = "arma")
     private Aventurero aventurero;
 
     public Arma() {
     }
 
-    public Arma(long idArma, String nombreArma, String daño, Aventurero aventurero) {
+    public Arma(long idArma, String nombreArma, String danyo, Aventurero aventurero) {
         this.idArma = idArma;
         this.nombreArma = nombreArma;
-        this.daño = daño;
+        this.danyo = danyo;
         this.aventurero = aventurero;
     }
 
-    public Arma(String nombreArma, String daño) {
+    public Arma(String nombreArma, String danyo) {
         this.nombreArma = nombreArma;
-        this.daño = daño;
+        this.danyo = danyo;
     }
 
     public long getIdArma() {
@@ -49,12 +51,12 @@ public class Arma {
         this.nombreArma = nombreArma;
     }
 
-    public String getDaño() {
-        return daño;
+    public String getDanyo() {
+        return danyo;
     }
 
-    public void setDaño(String daño) {
-        this.daño = daño;
+    public void setDanyo(String danyo) {
+        this.danyo = danyo;
     }
 
     public Aventurero getAventurero() {
@@ -67,6 +69,6 @@ public class Arma {
 
     @Override
     public String toString() {
-        return "Arma [idArma= " + idArma + ", nombreArma= " + nombreArma + ", daño=" + daño + "]";
+        return "Arma [idArma= " + idArma + ", nombreArma= " + nombreArma + ", daño=" + danyo + "]";
     }
 }

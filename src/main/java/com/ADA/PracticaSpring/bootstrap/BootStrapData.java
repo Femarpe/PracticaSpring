@@ -7,7 +7,7 @@ import com.ADA.PracticaSpring.repository.AventureroRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class BootStrapData implements CommandLineRunner {
     private final AventureroRepository aventureroRepository;
     private final ArmaRepository armaRepository;

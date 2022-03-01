@@ -1,17 +1,20 @@
 package com.ADA.PracticaSpring.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
+@Table(name = "aventurero")
 public class Aventurero {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idAdv;
 
     private String nombreAventurero;
 
-    @OneToOne
-    @JoinColumn(name = "idArma")
+    @JsonIgnore
+    @OneToOne ( mappedBy = "aventurero")
     private Arma arma;
 
     public Aventurero() {
