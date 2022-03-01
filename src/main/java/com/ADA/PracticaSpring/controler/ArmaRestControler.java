@@ -38,7 +38,7 @@ public class ArmaRestControler {
     @GetMapping("/view/armas")
     public String getArmas(Model model){
         model.addAttribute("armas",armaRepository.findAll());
-        return "arma/list.html";
+        return "arma/list";
     }
 
     @GetMapping("/view/addarma")
