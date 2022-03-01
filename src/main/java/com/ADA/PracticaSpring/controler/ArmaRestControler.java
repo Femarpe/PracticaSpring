@@ -30,9 +30,9 @@ public class ArmaRestControler {
         return armaRepository.findById(Math.toIntExact(id)).orElseThrow(() -> new ArmaNotFoundException(id));
     }
 
-    @GetMapping("/ar")
+    @GetMapping("/arIndex")
     public String showDocumenation(Model model) {
-        return "index";
+        return "indexArmas";
     }
 
     @GetMapping("/view/armas")
