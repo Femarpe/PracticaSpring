@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 public class AventureroRestControler {
-    private final Log log = LogFactory.getLog(AventureroRestControler.class);
+    private final Log log = LogFactory.getLog(ArmaRestControler.class);
 
     private final AventureroRepository aventureroRepository;
 
