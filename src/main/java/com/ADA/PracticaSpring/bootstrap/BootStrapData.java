@@ -22,10 +22,10 @@ public class BootStrapData implements CommandLineRunner {
         Aventurero aventurero = new Aventurero("Euris");
         Arma arma = new Arma("Garra", "Cortante");
 
+        aventureroRepository.save(aventurero);
         arma.setAventurero(aventurero);
         aventurero.setArma(arma);
         armaRepository.save(arma);
-        aventureroRepository.save(aventurero);
 
 
         System.out.println("numero de Aventureros: " + aventureroRepository.count());

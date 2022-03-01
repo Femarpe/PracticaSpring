@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso a Datos</title>
+</head>
+<body>
+<h1>Armas</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>Nombre</th>
+
+    </tr>
+    <tr th:each="arma : ${armas}">
+        <td th:text="${arma.idArma}"></td>
+        <td th:text="${arma.nombreArma"> Meowth</td>
+        <td th:text="${arma.daño"> cortante</td>
+
+    </tr>
+</table>
+</body>
+</html>
+
